@@ -23,7 +23,7 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Copy the composer files and install dependencies
-COPY ./E-commerce-7June/composer.json composer.lock ./
+COPY ./E-commerce-7June/composer.json ./E-commerce-7June/composer.lock ./
 RUN composer install --no-scripts --no-autoloader
 
 # Copy the rest of the application code
